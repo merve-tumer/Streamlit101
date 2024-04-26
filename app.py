@@ -48,8 +48,8 @@ st.file_uploader(label="Dosya yüklemek için tıklayınız")
 
 # Streamlit ile arayüz yerleşimi (col, tab, sidebar)
 # bunun çalışması için yukardaki kodların yoruma alınması gerekir
-tab1, tab2 = st.columns(2)
-with tab1:
+col1, col2 = st.columns(2)
+with col1:
     st.markdown("<h3><b> Kullanıcı Bilgileri </b></h3>", unsafe_allow_html=True)
     st.text_input(label="E-posta adresinizi giriniz: ")
     st.text_input(label="Şifrenizi Giriniz", type="password")
@@ -57,7 +57,7 @@ with tab1:
     st.divider()
     st.button(label="Giriş Yap")
 
-with tab2:
+with col2:
     st.markdown("<h3><b> Kullanım Tercihleri </b></h3>", unsafe_allow_html=True)
     st.divider()
     st.radio(label="Hesap Türü", options=["Öğrenci", "Mezun"])
