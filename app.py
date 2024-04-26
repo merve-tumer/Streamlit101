@@ -24,6 +24,29 @@ st.subheader("Bu bir subheader örneğidir")
 st.code('for i in range(10): my_function()')
 st.latex(r''' e^{i/pi} + 1 = 0 ''')
 
+# https://docs.streamlit.io/
+
+# Streamlit ile multimedya gösterme
+
+st. image(image="1-image_sample.png")
+st.video(data="2-video_sample.mp4")
+# st.audio(data="ses-yolu")
+
+# Streamlit ile kullanıcı etkileşimi (buton, radio, checkbox, slider, number input, file uploader)
+st.write("lütfen bilgilerinizi giriniz")
+st.text_input(label="lütfen e-posta adresinizi giriniz:")
+st.text_input(label="lütfen şifrenizi giriniz:", type="password")
+st.checkbox(label="Şifremi unuttum")
+st.divider()
+st.number_input(label="Lütfen yaşınızı girin:", min_value=18, max_value=40, value=22)
+st.slider(label="Lütfen yaşınızı girin:", min_value=18, max_value=40, value=22)
+st.button(label="Giriş Yap")
+st.divider()
+st.radio(label="Statünüz nedir? ", options=["Öğrenci", "Mezun"])
+st.divider()
+st.file_uploader(label="Dosya yüklemek için tıklayınız")
+
+
 
 
 
