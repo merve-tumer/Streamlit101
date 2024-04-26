@@ -46,6 +46,59 @@ st.radio(label="Statünüz nedir? ", options=["Öğrenci", "Mezun"])
 st.divider()
 st.file_uploader(label="Dosya yüklemek için tıklayınız")
 
+# Streamlit ile arayüz yerleşimi (col, tab, sidebar)
+# bunun çalışması için yukardaki kodların yoruma alınması gerekir
+tab1, tab2 = st.columns(2)
+with tab1:
+    st.markdown("<h3><b> Kullanıcı Bilgileri </b></h3>", unsafe_allow_html=True)
+    st.text_input(label="E-posta adresinizi giriniz: ")
+    st.text_input(label="Şifrenizi Giriniz", type="password")
+    st.checkbox(label="Şifremi Unuttum")
+    st.divider()
+    st.button(label="Giriş Yap")
+
+with tab2:
+    st.markdown("<h3><b> Kullanım Tercihleri </b></h3>", unsafe_allow_html=True)
+    st.divider()
+    st.radio(label="Hesap Türü", options=["Öğrenci", "Mezun"])
+    st.slider(label="Zaman Aşımı Süresi (saniye)", min_value=3, max_value=30, value=5)
+    st.file_uploader(label="Güncel Özgeçmişinizi Yükleyiniz")
+
+# tab versiyonu
+# bunun çalışması için yukardaki kodların yoruma alınması gerekir
+
+# sol tarafa kenar çubuğu ekleme
+st.sidebar.markdown("<h4> Uygulamamıza Hoşgeldin! </h4>", unsafe_allow_html=True)
+st.sidebar.image("1-image_sample.png")
+
+tab1, tab2 = st.columns(2)
+with tab1:
+
+    st.text_input(label="E-posta adresinizi giriniz: ")
+    st.text_input(label="Şifrenizi Giriniz", type="password")
+    st.checkbox(label="Şifremi Unuttum")
+    st.divider()
+    st.button(label="Giriş Yap")
+
+with tab2:
+    st.radio(label="Hesap Türü", options=["Öğrenci", "Mezun"])
+    st.slider(label="Zaman Aşımı Süresi (saniye)", min_value=3, max_value=30, value=5)
+    st.file_uploader(label="Güncel Özgeçmişinizi Yükleyiniz")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
